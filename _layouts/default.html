@@ -4,24 +4,20 @@
   <meta charset="utf-8">
   <link rel="stylesheet" href="/assets/style.css">
   <title>{{ page.title }}</title>
-
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
-  <!-- 可选：你可以在这里加全局 CSS -->
   <style>
-    /* 图片容器右侧固定 */
+    /* 图片容器竖直排列并居中 */
     .images-container {
-      position: fixed;        /* 固定在屏幕上 */
-      top: 100px;             /* 离顶部距离，可调整 */
-      right: 20px;            /* 离右侧距离 */
       display: flex;
-      flex-direction: column; /* 竖直排列 */
-      gap: 20px;              /* 图片间距 */
-      max-width: 200px;       /* 控制图片最大宽度 */
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;          /* 图片间距 */
+      margin-bottom: 30px; /* 图片和正文间距 */
     }
 
     .images-container img {
-      width: 100%;            /* 填满容器宽度 */
+      width: 400px;       /* 可根据需要调整图片大小 */
       display: block;
     }
   </style>
@@ -29,6 +25,13 @@
 
 <body>
 
+<!-- 每一页内容顶部都显示图片 -->
+<div class="images-container">
+  <img src="/images/IMG_0045.jpeg" alt="Knots">
+  <img src="/images/IMG_0046.jpeg" alt="Hopf fibration">
+</div>
+
+<!-- 页面标题和导航 -->
 <h1>Lingyu Yu</h1>
 
 <nav>
@@ -41,29 +44,6 @@
 <hr>
 
 {{ content }}
-
-<!-- 只在 Home 页面显示图片 -->
-{% if page.home %}
-<div class="images-container">
-  <img src="/images/IMG_0045.jpeg" alt="Knots">
-  <img src="/images/IMG_0046.jpeg" alt="Hopf fibration">
-</div>
-{% endif %}
-
-<style>
-.images-container {
-  display: flex;
-  flex-direction: column; /* 竖直排列 */
-  align-items: center;    /* 居中 */
-  gap: 20px;              /* 图片间距 */
-  margin-bottom: 30px;    /* 和正文间距 */
-}
-
-.images-container img {
-  width: 400px;           /* 可根据需要调整大小 */
-  display: block;
-}
-</style>
 
 </body>
 </html>
