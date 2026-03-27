@@ -1,8 +1,8 @@
 ---
 layout: default
 title: Home
+home: true
 ---
-
 ## About Me
 
 I am Lingyu Yu, and currently I am an undergraduate student in mathematics with interests in Low-dimensional Topology  
