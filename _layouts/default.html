@@ -10,14 +10,16 @@
     /* 图片容器横向排列并居中 */
     .images-container {
       display: flex;
-      flex-direction: row;   /* 横向排列 */
-      justify-content: center; /* 水平居中 */
-      gap: 20px;             /* 图片间距 */
-      margin-bottom: 30px;   /* 图片和正文间距 */
+      flex-direction: row;      /* 横向排列 */
+      justify-content: center;  /* 水平居中 */
+      align-items: center;      /* 垂直对齐 */
+      gap: 10px;                /* 图片间距，调整小一点 */
+      margin-bottom: 20px;      /* 图片和正文间距 */
     }
 
     .images-container img {
-      width: 300px;          /* 可调整图片大小 */
+      height: 60px;             /* 图片高度和标题差不多 */
+      width: auto;              /* 自动保持宽高比 */
       display: block;
     }
   </style>
@@ -25,7 +27,7 @@
 
 <body>
 
-<!-- 每页顶部图片，横向排列 -->
+<!-- 每页顶部图片 -->
 <div class="images-container">
   <img src="/images/IMG_0045.jpeg" alt="Knots">
   <img src="/images/IMG_0046.jpeg" alt="Hopf fibration">
