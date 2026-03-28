@@ -3,4 +3,4 @@ layout: default
 title: CV
 ---
 
-<iframe src="/cv.pdf" width="100%" height="800px"></iframe>
+<iframe src="/CV.pdf" width="100%" height="800px"></iframe>
